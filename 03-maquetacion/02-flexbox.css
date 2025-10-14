@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* temporal */
+  /* border:2px solid red; */
+}
+
+body {
+  /* colocamos "más" fuentes en caso no encuentre rápido */
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fraunces", serif;
+  font-weight: 300;
+}
+/* reseteando estilos de ul y a */
+a {
+  text-decoration: none;
+  /* inherit -> heredado, vamos a tomar el color heredado de un elemento padre */
+  color:inherit;
+}
+
+ul {
+  /* para modificar las viñetas de una lista */
+  list-style: none;
+}
+
+/* vamos a usarlo para centrar contenido */
+.contenedor {
+  max-width: 1200px;
+  /* al darle el valor auto le estamos diciendo al navegador, que el se encargue */
+  margin:0 auto;
+}
+
+.cabecera {
+  padding:96px 0;
+  /* text-center alinea SOLO texto de forma horizontal */
+  text-align: center;
+}
+
+.oferta {
+  font-size:12px;
+  background-color: lightgray;
+  padding:3px;
+  /* indica el redondeado de un borde */
+  border-radius: 50px;
+}
+
+.main-title {
+  font-size:72px;
+  /* verticalmente lo usual es aplicarlo o arriba o abajo pero no los dos, al menos no en múñtiples elementos */
+  margin-top: 20px;
+  /* los margenes verticales no se apilan uno encima de otro, más bien da la sensación de solaparse */
+  /* margin-bottom: 20px; */
+}
+
+.text-marketing {
+  color:gray;
+  font-size:20px;
+  margin-top:20px;
+}
+
+.call-to-action {
+  margin-top: 30px;
+}
+
+/* con esta clase damos la forma */
+.btn {
+  padding: 15px 20px;
+  border-radius: 50px;
+  margin-left:10px;
+  min-width: 130px;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-white {
+  border: 2px solid black;
+  font-weight: 500;
+}
+
+.btn-dark {
+  background-color: black;
+  color: white;
+}
+
+.rectangulo-header {
+  /* las unidades porcentuales suelen tomar el elemento padre como referencia, en este caso header */
+  width: 100%;
+  margin-top: 64px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 42px 88px;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.logo {
+  font-size:32px;
+  font-weight: 900;
+}
+
+.btn-sm {
+  padding: 8px 15px;
+}
+
+/* questions */
+.questions {
+  height: 450px;
+  margin-bottom: 96px;
+  display: flex;
+  gap:40px;
+}
+
+.question-title {
+  font-size: 54px;
+}
+.question-orange {
+  /* -top -bottom -left -right */
+  border-top: 4px solid orangered;
+  padding-top: 24px;
+}
+
+.question-orange > i {
+  color:orangered;
+  margin: 24px 0 32px 0;
+}
+
+.question-blue {
+  border-top: 4px solid steelblue;
+  padding-top: 24px;
+  align-self: flex-end;
+}
+
+.question-blue > i {
+  color:steelblue;
+  margin: 24px 0 32px 0;
+}
+
+.data {
+  padding:48px;
+}
+
+.title-data {
+  font-size:48px;
+  margin-bottom: 20px;
+}
+
+.table-workspace {
+  width: 100%;
+  /* quita el espaciado entre td's */
+  border-collapse: collapse;
+}
+
+.table-workspace td {
+  /* border:1px solid black; */
+  padding: 16px;
+}
+
+/* espacio aplica para elementos hijos */
+/* De tablework-space tendrá elementos hijos que son tr tomamos los impares (odd) y dentro de esos tr buscamos los td que son hijos*/
+.table-workspace tr:nth-of-type(odd) td{
+  background-color: gold;
+  /* border-radius: 40px; */
+}
+
+.table-workspace tr:nth-of-type(odd) td:first-child {
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+}
+
+.table-workspace tr:nth-of-type(odd) td:last-child {
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+}
