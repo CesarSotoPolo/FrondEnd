@@ -45,8 +45,8 @@ body{
 }
 
 .grilla{
-    background-color: lightblue;
-     height: 100vh;      
+    background-color: whitesmoke;
+    /* height: 100vh;       */
     display: grid;
     padding: 2rem;
     gap: 1rem;
@@ -57,18 +57,18 @@ body{
     /* grid-template-columns: repeat(3,200px); */
     /* fr -> freespace */
     /* grid-template-columns: repeat(3,1fr); */
-    grid-template-columns: repeat(3,minmax(200px,1fr)); 
+    grid-template-columns: repeat(5,minmax(180px,1fr)); 
     /* grid-template-columns: repeat(auto-fit,minmax(120px,1fr)); */
 }
 
 .item {
   background-color: white;
-  border-radius: 8px;
-  text-align: center;
+  border-radius: 8px;  
   padding: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
   display: flex;
   flex-direction: column;
+  height: 200px;
 }
 
 .color-box {
@@ -83,8 +83,59 @@ button {
   background-color: #3498db;
   border: none;
   color: white;
-  padding: 0.5rem;
+  padding: 0.3rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-top:auto ;
+  margin-bottom: 5px;
 }
+
+h3{
+    font-size: 0.9rem;
+    font-family: 'Arimo';
+    text-align: left;
+    color: #585b5d;
+    margin-top:auto;    
+    margin-bottom: 0px;
+
+}
+
+/* Cada tarjeta obtiene su color automáticamente según su posición. */
+
+.item:nth-child(6n+1) .color-box {
+     background-color: #d95941; 
+ } 
+
+.item:nth-child(6n+2) .color-box { 
+    background-color: #4995d8;
+ }
+
+.item:nth-child(6n+3) .color-box {
+     background-color: #2ecc71; 
+} 
+
+.item:nth-child(6n+4) .color-box {
+     background-color: #eaa12f; 
+} 
+
+.item:nth-child(6n+5) .color-box { 
+    background-color: #925bb3; 
+} 
+
+/* 
+.orange{
+    background-color: #d95941;
+}
+
+.blue{
+    background-color: #4995d8;
+}
+.green{
+    background-color: #62c977;
+}
+.yellow{
+    background-color: #eaa12f;
+}
+.purple{
+    background-color: #925bb3;
+} */
