@@ -100,7 +100,8 @@ h3{
 
 }
 
-/* Cada tarjeta obtiene su color automáticamente según su posición. */
+/* Cada tarjeta obtiene su color automáticamente según su posición. 
+ya que se nota que hay un patron entre la posicion y los colores*/
 
 .item:nth-child(6n+1) .color-box {
      background-color: #d95941; 
@@ -111,7 +112,7 @@ h3{
  }
 
 .item:nth-child(6n+3) .color-box {
-     background-color: #2ecc71; 
+     background-color: #62c977; 
 } 
 
 .item:nth-child(6n+4) .color-box {
@@ -121,21 +122,13 @@ h3{
 .item:nth-child(6n+5) .color-box { 
     background-color: #925bb3; 
 } 
+.item:nth-child(6n+6) .color-box { 
+    background-color: #53b99d; 
+} 
 
-/* 
-.orange{
-    background-color: #d95941;
+@media(width<=420px){
+      html{
+        font-size: 0.75rem;
+    }
 }
-
-.blue{
-    background-color: #4995d8;
-}
-.green{
-    background-color: #62c977;
-}
-.yellow{
-    background-color: #eaa12f;
-}
-.purple{
-    background-color: #925bb3;
-} */
+ 
