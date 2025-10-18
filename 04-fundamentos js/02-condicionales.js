@@ -36,6 +36,7 @@ if(nota>=18){
 
 let rol=prompt("Ingrese el tipo de usuario admin, supervisor,user")
 
+// Operador O or  al menos un valor tiene que ser true
 if(rol=="admin" || rol=="supervisor"){
     console.log("puede acceder a reportes")
 }else if(rol=="usuario"){
@@ -43,3 +44,31 @@ if(rol=="admin" || rol=="supervisor"){
 }else{
     console.log("Rol incorrecto, verificar por favor")
 }
+
+//IMPORTANTE
+let creditos=prompt("De cuantos creditos dispones");
+
+console.log(creditos)
+
+// el == va a evaluar SOLO el valor
+// el === va a evaluar el valot Y el tipo de dato
+if(creditos === 100){
+    console.log("tienes el numero de creditos correcto")
+}else{
+    console.log("No tienes el numero de creditos")
+}
+
+// falsy, recordemos que ! niega
+//if (!undefined){
+//if (!0){    
+//if (!""){
+//if (!null){
+if(!("patatas"/100)){
+console.log("patatas"/100);  // NaN Not a Number 
+console.log("Es falso/falsy");
+}
+
+// Operadores ternarios
+//expresion a evaluar ? return si es true : return si es false
+let esTruthy = 10 < 200 ? "es verdaderoooo" : "es falsoooo";
+console.log(esTruthy);
