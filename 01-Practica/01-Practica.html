@@ -6,18 +6,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./01-Practica.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="./01-Practica.css">
     <title>Document</title>
 </head>
 <body>
     <header class="main-header">
         <div class="logo">MiLogo</div>
-        <nav class="main-nav">
-            <ul>
-               <li><a href="#">Inicio</a></li>
-                <li><a href="#">Perfil</a></li>
-            </ul>
-        </nav>
+
+        <input type="checkbox" id="check-menu">
+
+      <label class="open-menu" for="check-menu">
+        <i class="fa-solid fa-bars fa-2x"></i>
+      </label>
+        
+            <ul class="links">
+               <li><a href="">Inicio</a></li>
+                <li><a href="">Perfil</a></li>
+            
+                <label class="close-menu" for="check-menu">
+                    <i class="fa-solid fa-xmark fa-2x"></i>
+                 </label>            
+            </ul>      
+
     </header> 
 
     <div class="grilla">  
