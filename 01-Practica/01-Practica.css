@@ -7,46 +7,44 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f6f7;
+    overflow-x: hidden;
 }
 
-.main-header{
+header{
     background-color: #2f3d4f;
     color: white;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center;  
+    width: 100%; 
 }
 
 .logo{
-    font-size: 20;
-    font-weight: bold;    
+    font-size: 20px;
+    font-weight: 500;    
 }
 
-.links{
+.links{    
     list-style: none;
     margin: 0;
     padding: 0; 
     display: flex;
-    gap: 16px;    
+    gap: 16px;   
+    transition: right 300ms ease-in-out; 
 }
 
 .links a {
-    color: #bdc3c7;  
+    color: #ffffff;   
     text-decoration: none;  
-    font-size: 0.75rem; 
-    /* deocoracion para que la transicion de gris a blanco sea suave a la vista */
-    transition: color 0.3s ease;
-
-}
-
-ul{
-    list-style: none;
+    font-size: 0.75rem;
 }
 
 .links a:hover {
-    color: white;  
-    text-decoration: underline;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);  
+  padding: 0.25rem 0.5rem; 
+  border-radius: 4px;
 }
 
 .grilla{
@@ -57,23 +55,23 @@ ul{
     gap: 1rem;
     /* max-width: 1200px; */
     margin: 0 auto;
-
-    /* grid-template-columns: 300px 300px 300px; */
-    /* grid-template-columns: repeat(3,200px); */
-    /* fr -> freespace */
-    /* grid-template-columns: repeat(3,1fr); */
     grid-template-columns: repeat(5,minmax(180px,1fr)); 
-    /* grid-template-columns: repeat(auto-fit,minmax(120px,1fr)); */
+
 }
 
 .item {
   background-color: white;
   border-radius: 8px;  
   padding: 0.5rem;
-  /* box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
   display: flex;
   flex-direction: column;
   height: 200px;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
 }
 
 .color-box {
@@ -83,7 +81,6 @@ ul{
   margin-bottom: 0.5rem;
 }
 
-/* Botón */
 button {
   background-color: #3498db;
   border: none;
@@ -97,7 +94,7 @@ button {
 
 h3{
     font-size: 0.9rem;
-    font-family: 'Arimo';
+    font-family: 'Arimo',sans-serif;
     text-align: left;
     color: #585b5d;
     margin-top:auto;    
@@ -141,11 +138,12 @@ ya que se nota que hay un patron entre la posicion y los colores*/
 }
 
 @media(max-width :420px){
+ 
       html{
         font-size: 1rem;
     }
 
-.main-header {
+header {
   justify-content: space-between;
   align-items: center;  
   padding: 10px;
@@ -153,20 +151,9 @@ ya que se nota que hay un patron entre la posicion y los colores*/
   /* width: 100%;    */
 }
  
-
- /* .links ul { */
-  /* flex-direction: column; */
-  /* display: flex; */
-  /* gap: 10px; */
-  /* width: 100%; */
-/* }  */
-
- 
-
 .grilla {
-    grid-template-columns: repeat(1, 1fr); /* una tarjeta por fila */
-    padding: 1rem; /* reducimos el padding*/
-    /*width: 100%; */  /*para que la grilla ocupe todo el ancho */
+    grid-template-columns: repeat(1, 1fr); 
+    padding: 1rem;   
 }
 
 .color-box {
@@ -177,10 +164,8 @@ ya que se nota que hay un patron entre la posicion y los colores*/
     width: 100%;
     max-width: 100%;
     margin: 0 auto; 
-    height: auto; /* para que se adapte al contenido */
+    height: auto; 
 }
-
-
 
 h3 {
   font-size: 0.8rem;
@@ -196,23 +181,13 @@ button {
   margin-bottom: 0.125rem;
 }
 
-
-
  .open-menu, .close-menu {
     display: block;
   }
 
-  .links a {
-    color: darkblue;  
-    text-decoration: none;  
-    font-size: 1rem; 
-    /* deocoracion para que la transicion de gris a blanco sea suave a la vista */
-    transition: color 0.3s ease;
-
-}
 
   .links {
-    background-color: rgba(0, 128, 0, 0.85);
+    background-color: rgba(0, 20, 0, 0.9);
     color: chocolate;
     font-weight: bold;
     flex-direction: column;
@@ -230,12 +205,14 @@ button {
     transition-duration: 300ms;
   }
 
+    .links a {
+    color: white;  
+    text-decoration: none;  
+    font-size: 1rem; 
+}
+
   #check-menu:checked ~ .links{
     right: 0;
   }
-
- 
-
-
 }
  
