@@ -1,0 +1,41 @@
+//sintaxis clásica de una función
+function sumar (a, b){
+  return a + b;
+}
+
+console.log(sumar(10, 30));
+
+//funciones anónimas
+//Ciudadano de primera clase
+//Significa que podemos usar la referencia de una función como una variable más
+let resta = function (a, b) {
+  return a - b;
+}
+
+console.log(resta(50, 20));
+
+function operacion (a, b, tarea) {
+    console.log("Esto es tarea:",tarea)
+  return tarea(a, b); //función
+}
+
+console.log(operacion(100, 200, sumar));
+
+console.log(operacion(100, 200, resta));
+
+// funciones flecha
+//(parametros) => { codigo a ejecutar }
+// let  multiplicacion =(a, b) =>{
+//     return a * b;
+// }
+
+// (parametros) => expresion a retornar
+//cuando el codigo es corto
+let  multiplicacion =(a, b) => a * b;
+
+console.log(multiplicacion(5, 70));
+
+//ciando tenemos un solo parametro, podemos quitar losparentesis
+//let saludar = (nombre) => `Hola ${nombre}`;
+let saludar = nombre => `Hola ${nombre}`;
+console.log("Saludo", saludar("Henry"))
