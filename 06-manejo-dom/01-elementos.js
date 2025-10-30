@@ -87,7 +87,7 @@ piePagina.innerHTML =`<h2 class="titulo-footer">Derechos Reservados 2005</h2>
 
 const personas = ["Juan Perez", "Victor De la Cruz", "Alexis Sanchez"];
 
-personas.forEach((per,index) => {
+personas.forEach((per, index) => {
     piePagina.innerHTML = piePagina.innerHTML + `
     <div>
         <h4>${index + 1} - ${per}</h4>
