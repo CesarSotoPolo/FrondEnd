@@ -16,3 +16,30 @@ formulario.addEventListener("submit", (event) => {
   // console.log(event.target.dataset)
    console.log("Intento de envio del formulario");
 })
+
+// LOCAL STORAGE
+//setItem permite guardar informacion setItem("nombre","valor")
+localStorage.setItem("nombre","Henry Soto");
+
+const item = localStorage.getItem("nombre");
+
+console.log(item);
+
+const objUser = {
+  rol: "supervisor",
+  nombre: "Cesar",
+  id: 537126
+}
+
+//pero como solo podemos guardar texto de ser algo completo lo tenemos que stringificar con JSON.stringify
+const JSONobjUser = JSON.stringify(objUser);
+
+console.log(JSONobjUser);
+console.log(typeof JSONobjUser);
+
+//ya convertido lo podemos guardar
+localStorage.setItem("userData", JSONobjUser);
+
+const dataUserAgain = localStorage.getItem("userData");
+//con .parse podemos volver a convertir de string a js
+console.log(JSON.parse(dataUserAgain))
