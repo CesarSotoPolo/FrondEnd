@@ -21,7 +21,7 @@ const readProductById = async (id) => {
 }
 
 const updateProduct = async (productEdited) => {
-  const response = await axios.put(`${URL}/${id}`, productEdited);
+  const response = await axios.put(`${URL}/${productEdited.id}`, productEdited);
   if(response.status !== 200) {
     throw new Error("Error al actualizar los datos")
   }
@@ -36,9 +36,19 @@ const createProduct = async (newProduct) => {
   return response.data;
 }
 
+const deleteProduct = async (id) => {
+  const response = await axios.delete(`${URL}/${id}`);
+  console.log({ response })
+  if(response.status !== 204) {
+    throw new Error("Error al actualizar los datos")
+  }
+  return response.data;
+}
+
 export {
   readProducts,
   createProduct,
   readProductById,
-  updateProduct
+  updateProduct,
+  deleteProduct
 }
